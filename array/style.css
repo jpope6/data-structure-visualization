@@ -11,8 +11,33 @@ html, body {
     color: black;
     background: cyan;
     height: 15vh;
+    display: grid;
+    grid-template: repeat(1, 15vh) / repeat(7, 1fr);
+    font-size: 2em;
+}
+
+#header > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
+}
+
+#header > div:nth-child(1) {
+    grid-column: 1;
+}
+
+#header > div:nth-child(2) {
+    grid-column: 4;
+}
+
+#back_button {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: black;
+    background: cyan;
+    border: none;
 }
