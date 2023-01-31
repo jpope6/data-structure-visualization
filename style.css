@@ -10,12 +10,13 @@ html, body {
 #header {
     color: black;
     background: cyan;
-    height: 15vh;
+    max-height: 15vh;
+    min-width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #header > h1 {
-    font-size: 4em;
+    font-size: 3rem;
 }
