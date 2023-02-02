@@ -52,19 +52,21 @@ html, body {
 }
 
 #array_container {
-    height: 11vh;
+    height: 10vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 5vh;
 }
 
 .box {
-    width: 5%;
-    height: 0;
-    padding-bottom: 5%;
+    width: 8%;
+    height: 100%;
     border: 1px solid grey;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box > h1 {
