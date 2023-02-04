@@ -1,5 +1,6 @@
 let array_container = document.getElementById('array_container');
 let push_button = document.getElementById('push');
+let pop_button = document.getElementById('pop');
 
 let array = [];
 let index = 0;
@@ -25,4 +26,11 @@ push_button.addEventListener('click', (e) => {
     array[index].querySelector('h1').innerHTML = value;
     document.getElementById('input').value = '';
     index++;
+})
+
+// Pop button will remove value from array
+pop_button.addEventListener('click', (e) => {
+    e.preventDefault();
+    index--;
+    array[index].querySelector('h1').innerHTML = '';
 })
