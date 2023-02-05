@@ -2,6 +2,7 @@ let array_container = document.getElementById('array_container');
 let push_button = document.getElementById('push');
 let pop_button = document.getElementById('pop');
 let search_button = document.getElementById('search');
+let reset_button = document.getElementById('reset');
 
 let input_container = document.getElementById('input_container');
 
@@ -75,6 +76,19 @@ search_button.addEventListener('click', async (e) => {
         // Sleep for 1 second
         await sleep(1000);
     }
+});
+
+// Reset button will reset array and remove all highlighted values 
+reset_button.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    for (let i = 0; i < array.length; i++) {
+        array[i].querySelector('h1').innerHTML = '';
+        array[i].style.backgroundColor = 'black';
+        document.getElementById('input').value = '';
+    }
+
+    index = 0;
 });
 
 // Sleep function to delay execution
