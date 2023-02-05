@@ -1,6 +1,7 @@
 let array_container = document.getElementById('array_container');
 let push_button = document.getElementById('push');
 let pop_button = document.getElementById('pop');
+let search_button = document.getElementById('search');
 
 let input_container = document.getElementById('input_container');
 
@@ -48,3 +49,35 @@ pop_button.addEventListener('click', (e) => {
     index--;
     array[index].querySelector('h1').innerHTML = '';
 })
+
+// Search button will search for value in array and highlight it
+search_button.addEventListener('click', async (e) => {
+    e.preventDefault();
+
+    // if nothing is entered in input field, return
+    if (!document.getElementById('input').value) return;
+
+    let value = document.getElementById('input').value;
+    for (let i = 0; i < array.length; i++) {
+
+        // if value is empty, stop
+        if (!array[i].querySelector('h1').innerHTML) return
+
+        // if value is found, highlight it green and stop
+        // else highlight it red
+        if (array[i].querySelector('h1').innerHTML == value) {
+            array[i].style.backgroundColor = 'green';
+            return;
+        } else {
+            array[i].style.backgroundColor = 'red';
+        }
+
+        // Sleep for 1 second
+        await sleep(1000);
+    }
+});
+
+// Sleep function to delay execution
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}

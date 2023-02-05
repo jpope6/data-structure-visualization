@@ -79,7 +79,7 @@ html, body {
     font-size: 1.5em;
 }
 
-#push, #pop {
+#push, #pop, #search, #reset {
     height: fit-content;
     width: fit-content;
     font-size: 1.5em;
@@ -88,11 +88,11 @@ html, body {
     border: none;
 }
 
-#push:hover, #pop:hover {
+#push:hover, #pop:hover, #search:hover, #reset:hover {
     filter: brightness(0.8);
 }
 
-#push:active, #pop:active {
+#push:active, #pop:active, #search:active, #reset:active {
     filter: brightness(0.6);
 }
 
