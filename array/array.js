@@ -68,6 +68,8 @@ search_button.addEventListener('click', async (e) => {
         // else highlight it red
         if (array[i].querySelector('h1').innerHTML == value) {
             array[i].style.backgroundColor = 'green';
+            await sleep(1000);
+            resetAfterSearch();
             return;
         } else {
             array[i].style.backgroundColor = 'red';
@@ -76,6 +78,9 @@ search_button.addEventListener('click', async (e) => {
         // Sleep for 1 second
         await sleep(1000);
     }
+
+    // Reset color after search 
+    resetAfterSearch();
 });
 
 // Reset button will reset array and remove all highlighted values 
@@ -94,4 +99,12 @@ reset_button.addEventListener('click', (e) => {
 // Sleep function to delay execution
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Function to reset the color of the array after search 
+function resetAfterSearch() {
+    for (let i = 0; i < array.length; i++) {
+        document.getElementById('input').value = '';
+        array[i].style.backgroundColor = 'black';
+    }
 }
