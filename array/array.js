@@ -79,7 +79,7 @@ search_button.addEventListener('click', async (e) => {
         }
 
         // Sleep for 1 second
-        await sleep(1000);
+        await sleep(500);
     }
 });
 
