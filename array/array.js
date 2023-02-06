@@ -62,7 +62,10 @@ search_button.addEventListener('click', async (e) => {
     for (let i = 0; i < array.length; i++) {
 
         // if value is empty, stop
-        if (!array[i].querySelector('h1').innerHTML) return
+        if (!array[i].querySelector('h1').innerHTML) {
+            resetAfterSearch();
+            return;
+        }
 
         // if value is found, highlight it green and stop
         // else highlight it red
@@ -78,9 +81,6 @@ search_button.addEventListener('click', async (e) => {
         // Sleep for 1 second
         await sleep(1000);
     }
-
-    // Reset color after search 
-    resetAfterSearch();
 });
 
 // Reset button will reset array and remove all highlighted values 
