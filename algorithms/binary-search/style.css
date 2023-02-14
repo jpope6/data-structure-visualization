@@ -83,3 +83,34 @@ html, body {
     align-items: center;
 }
 
+#search_button, #reset_button {
+    height: fit-content;
+    width: fit-content;
+    font-size: 1.5em;
+    color: black;
+    background: white;
+    border: none;
+}
+
+#search_button:hover, #reset_button:hover {
+    filter: brightness(0.8);
+}
+
+#search_button:active, #reset_button:active {
+    filter: brightness(0.6);
+}
+
+#input {
+    height: fit-content;
+    width: fit-content;
+    margin-bottom: 2em;
+}
+
+#input_value {
+    height: fit-content;
+    width: fit-content;
+    font-size: 1.5em;
+    color: black;
+    background: white;
+    border: none;
+}
