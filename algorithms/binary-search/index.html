@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet">
-    </head>
-    <body>
-        <header id="header">
-            <div>
-                <button id="back_button" type="button" onclick="history.back()">Back</button>
-            </div>
-            <div>
-                <h1>Binary Search</h1>
-            </div>
-        </header>
-        <div id="mainContent">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <div>
+            <button id="back_button" type="button" onclick="history.back()">Back</button>
+        </div>
+        <div>
+            <h1>Binary Search</h1>
+        </div>
+    </header>
+    <div id="mainContent">
+        <div id="input">
+            <input id="input_value" type="number" placeholder="Enter a number">
+            <button id="search_button" type="submit">Search</button>
             <div id="array"></div>
         </div>
         <script src="binary-search.js"></script>
-    </body>
+</body>
+
 </html>
