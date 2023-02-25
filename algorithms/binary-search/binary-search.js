@@ -2,6 +2,9 @@ let array = document.getElementById("array")
 let value = document.getElementById("input_value")
 let searchButton = document.getElementById("search_button")
 let resetButton = document.getElementById("reset_button")
+let slider = document.getElementById("myRange");
+let speed = 1000;
+let needToReset = false;
 
 let arr = []
 
@@ -43,6 +46,7 @@ addElements()
 
 // This function will use binary search for the given element in the array
 async function search() {
+    if (needToReset) return;
     let target = value.value;
 
     let left = 0
@@ -51,11 +55,12 @@ async function search() {
     while (left <= right) {
         let mid = Math.floor((left + right) / 2)
         highlight(mid, target)
-        await sleep(1000)
+        await sleep(speed)
 
         if (arr[mid] == target) {
             erase(mid, true)
             erase(mid, false)
+            needToReset = true;
             return mid
         } else if (arr[mid] < target) {
             erase(mid + 1, true)
@@ -102,6 +107,10 @@ function erase(index, direction) {
     }
 }
 
+slider.oninput = function() {
+    speed = this.value;
+}
+
 // Add event listener to the reset button 
 resetButton.addEventListener("click", () => {
     for (let i = 0; i < arr.length; i++) {
@@ -110,6 +119,7 @@ resetButton.addEventListener("click", () => {
         dict[i].style.background = "black"
     }
     value.value = "";
+    needToReset = false;
 });
 
 // Sleep function to delay execution
