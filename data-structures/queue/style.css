@@ -58,14 +58,14 @@ html, body {
     filter: brightness(0.6);
 }
 
-#stack-container {
+#queue-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .element {
-    color: cyan;
+    color: white;
     border: 1px solid gray;
     display: flex;
     justify-content: center;

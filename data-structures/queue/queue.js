@@ -4,12 +4,12 @@ back_button.addEventListener('click', () => {
     location.href = "../../index.html";
 })
 
-const stack_container = document.getElementById("stack-container");
+const queue_container = document.getElementById("queue-container");
 const push_button = document.getElementById("push");
 const pop_button = document.getElementById("pop");
 let reset_button = document.getElementById("reset");
 
-let stack = [];
+let queue = [];
 
 // Create new element on push
 push_button.addEventListener('click', (e) => {
@@ -24,8 +24,8 @@ push_button.addEventListener('click', (e) => {
     const h2 = document.createElement('h2');
     h2.innerHTML = value;
     div.appendChild(h2);
-    stack_container.appendChild(div);
-    stack.push(div);
+    queue_container.appendChild(div);
+    queue.push(div);
     document.getElementById('input').value = '';
 })
 
@@ -33,9 +33,9 @@ push_button.addEventListener('click', (e) => {
 pop_button.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if (stack.length == 0) return;
+    if (queue.length == 0) return;
 
-    const element = stack.shift();
+    const element = queue.shift();
     element.remove();
 })
 
@@ -46,8 +46,8 @@ reset_button.addEventListener('click', (e) => {
 
     document.getElementById('input').value = '';
 
-    for (let i = 0; i < stack.length; i++) {
-        stack[i].remove();
+    for (let i = 0; i < queue.length; i++) {
+        queue[i].remove();
     }
-    stack = [];
+    queue = [];
 })

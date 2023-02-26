@@ -1,0 +1,75 @@
+html, body {
+    background: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#header {
+    color: black;
+    background: cyan;
+    font-size: 2em;
+    display: grid;
+    grid-template: repeat(1, 15vh) / repeat(3, 1fr);
+}
+
+#header > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#back_button {
+    width: fit-content;
+    font-size: 1.5em;
+    color: black;
+    background: transparent;
+    border: none;
+}
+
+#container {
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#input {
+    min-width: 3vw;
+    width: fit-content;
+    font-size: 1.5em;
+}
+
+#push, #pop, #reset {
+    width: fit-content;
+    font-size: 1.5em;
+    color: black;
+    background: white;
+    border: none;
+}
+
+#push:hover, #pop:hover, #reset:hover {
+    filter: brightness(0.8);
+}
+
+#push:active, #pop:active, #reset:active {
+    filter: brightness(0.6);
+}
+
+#stack-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element {
+    color: white;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    min-width: 50px;
+}
