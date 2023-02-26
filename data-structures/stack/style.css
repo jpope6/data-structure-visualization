@@ -1,0 +1,30 @@
+html, body {
+    background: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#header {
+    color: black;
+    background: cyan;
+    font-size: 2em;
+    display: grid;
+    grid-template: repeat(1, 15vh) / repeat(3, 1fr);
+}
+
+#header > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#back_button {
+    width: fit-content;
+    font-size: 1.5em;
+    color: black;
+    background: cyan;
+    border: none;
+}
+
+
