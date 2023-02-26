@@ -4,6 +4,12 @@ let pop_button = document.getElementById('pop');
 let search_button = document.getElementById('search');
 let reset_button = document.getElementById('reset');
 
+let back_button = document.getElementById('back_button');
+
+back_button.addEventListener('click', () => {
+    location.href = "../../index.html";
+})
+
 let input_container = document.getElementById('input_container');
 
 let array = [];
