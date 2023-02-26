@@ -23,16 +23,17 @@ html, body {
     width: fit-content;
     font-size: 1.5em;
     color: black;
-    background: cyan;
+    background: transparent;
     border: none;
 }
 
 #container {
+    height: 85vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
 }
 
 #input {
@@ -41,7 +42,7 @@ html, body {
     font-size: 1.5em;
 }
 
-#push, #pop {
+#push, #pop, #reset {
     width: fit-content;
     font-size: 1.5em;
     color: black;
@@ -49,11 +50,26 @@ html, body {
     border: none;
 }
 
-#push:hover, #pop:hover {
+#push:hover, #pop:hover, #reset:hover {
     filter: brightness(0.8);
 }
 
-#push:active, #pop:active {
+#push:active, #pop:active, #reset:active {
     filter: brightness(0.6);
 }
 
+#stack-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element {
+    color: cyan;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    min-width: 50px;
+}
